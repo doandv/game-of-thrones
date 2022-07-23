@@ -14,7 +14,7 @@ const initialState: CharacterStateModel = {
         born: "",
         died: "",
         isAlive: false,
-        page: 2, // because page 1 data bad
+        page: 1,
         paseSize: 10
     },
     CharacterData: {

@@ -24,8 +24,10 @@ export async function fetchBookData(filterModel:BookFilterModel):Promise<BookRes
 
 export async function fetchCharacterData(filterModel:CharacterFilterModel):Promise<CharacterResponseModel> {
     let apiUrl = `${API_DOMAIN_URL}${API_CHARACTERS_URL}`;
-    if(filterModel.page) {
-        apiUrl += `?page=${filterModel.page}`;
+    let page = filterModel.name ? filterModel.page : 2;
+
+    if(page) {
+        apiUrl += `?page=${page}`;
     }
     if(filterModel.paseSize) {
         apiUrl += `&paseSize=${filterModel.paseSize}`;

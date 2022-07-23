@@ -1,0 +1,166 @@
+.login-popup {
+    width: 440px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 2px auto 0px;
+    position: relative;
+}
+.login-popup .col-12{
+    padding: 0;
+    position: relative;
+}
+.login-popup .text-red{
+    font-style: italic;
+    color: red;
+}
+.popup__header{
+    padding: 40px 20px 20px;
+}
+.popup__header .header__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 21px;
+    text-align: center;
+}
+.popup__header img{
+    width: 213.94px;
+}
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup__content{
+    padding: 0 20px;
+}
+.popup-content__form .col-12{
+    margin-bottom: 10px;
+}
+.popup-content__form label{
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 5px;
+}
+.popup-content__form input{
+    width: calc(100% - 40px);
+    outline: unset;
+    height: 57px;
+    border: 1px solid #A1A1A1;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.popup-content__form input::placeholder{
+    font-style: italic;
+    color: #98969D;
+}
+.popup-content__form .input-icon{
+    display: flex;
+    align-items: center;
+    border: 1px solid #A1A1A1;
+    border-radius: 4px;
+}
+.popup-content__form .input-icon input{
+    border: unset;
+}
+.popup-content__form .icon-show-pwd{
+    position: absolute;
+    top: 49px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup-content__form .icon-close-pwd{
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup-content__submit{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    width: 143px;
+    height: 52px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 17.3333px;
+    line-height: 26px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-outline-purple{
+    border: 1px solid #805BE3;
+    color: #805BE3;
+    margin-right: 10px;
+}
+.btn-purple{
+    background-color: #805BE3;
+    color: #fff;
+}
+.popup__footer{
+    padding: 10px 20px 50px;
+}
+
+/* #region Modal */
+.app-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba( 0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    display: flex;
+}
+.app-modal .modal-container {
+    background: #fff;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .3s;
+    max-width: 440px;
+}
+.app-modal .modal-body {
+    padding: 60px 50px 41px;
+    text-align: center;
+}
+.app-modal .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.app-modal .modal-login-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.app-modal .modal-retry-login-btn {
+    font-family: 'Poppins' !important;
+    font-weight: 600;
+    font-size: 17.3333px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #805BE3;
+    border-radius: 5.77778px;
+    padding: 13px 49px;
+    border: none;
+    outline: none;
+}
+
+/* #endregion Modal */

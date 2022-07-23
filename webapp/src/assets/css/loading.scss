@@ -1,0 +1,151 @@
+$loading_item_content-color: #000000; //rgba(170, 170, 170, 1);
+$loading_item_wh: 20px;
+$loading_animation_type:  loading-line-shrink;
+.loading-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background:#aaaaaa;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+
+    .loading {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        z-index: 1000;
+        //background-color: green;
+    }
+    .ic-loading {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        //animation: 1s linear -1s infinite normal none running loading-line-fade;
+    }
+
+    .loading-message {
+        position: absolute;
+        color: #805be3;
+        //margin-top: calc(50vh + 40px);
+    }
+
+    .loading {
+        width: 0px;
+        //transform: scale(1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: scale(0.36) translate(-50%, -50%);
+        //animation: loading-line-fade 1s infinite;
+        // position: relative;
+        // animation: mg-loading 2.5s infinite linear both;
+        // margin-top: calc(50vh - 20px);
+        .loading-item {
+            position: absolute;
+            top: -3.5px;
+            width: $loading_item_wh;
+            height: $loading_item_wh;
+            background: transparent;
+            border-radius: calc(#{$loading_item_wh} / 2);
+            transform-origin: left center;
+
+            &.l-1 {
+                transform: rotate(0deg) translateX(45px);
+            }
+            &.l-2 {
+                transform: rotate(45deg) translateX(45px);
+            }
+            &.l-3 {
+                transform: rotate(90deg) translateX(45px);
+            }
+            &.l-4 {
+                transform: rotate(135deg) translateX(45px);
+            }
+            &.l-5 {
+                transform: rotate(180deg) translateX(45px);
+            }
+            &.l-6 {
+                transform: rotate(225deg) translateX(45px);
+            }
+            &.l-7 {
+                transform: rotate(270deg) translateX(45px);
+            }
+            &.l-8 {
+                transform: rotate(315deg) translateX(45px);
+            }
+        }
+
+        .item-content {
+            width: 100%;
+            height: 100%;
+            background: $loading_item_content-color;
+            border-radius: calc(#{$loading_item_wh} / 2);
+            box-shadow: transparent 0px 0px 1px;
+            &.itm-1 {
+                animation: 1s linear -1s infinite normal none running $loading_animation_type;
+            }
+            &.itm-2 {
+                animation: 1s linear -0.875s infinite normal none running $loading_animation_type;
+            }
+            &.itm-3 {
+                animation: 1s linear -0.75s infinite normal none running $loading_animation_type;
+            }
+            &.itm-4 {
+                animation: 1s linear -0.625s infinite normal none running $loading_animation_type;
+            }
+            &.itm-5 {
+                animation: 1s linear -0.5s infinite normal none running $loading_animation_type;
+            }
+            &.itm-6 {
+                animation: 1s linear -0.375s infinite normal none running $loading_animation_type;
+            }
+            &.itm-7 {
+                animation: 1s linear -0.25s infinite normal none running $loading_animation_type;
+            }
+            &.itm-8 {
+                animation: 1s linear -0.125s infinite normal none running $loading_animation_type;
+            }
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes loading-line-fade {
+    0%,
+    39%,
+    100% {
+        opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading-line-shrink {
+    0%, 25%, 100% {
+      /* minimum scale and opacity */
+      transform: scale(0.5);
+      opacity: 0.25;
+    }
+    26% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
